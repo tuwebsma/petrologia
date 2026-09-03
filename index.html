@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Petrología Ígneo-Metamórfica | Universidad Nacional de Río Negro</title>
+
+  <meta name="description"
+    content="Plataforma educativa y litoteca virtual de Petrología Ígneo-Metamórfica de la Universidad Nacional de Río Negro (UNRN). Muestras de mano, fotomicrografías, abreviaturas de Whitney & Evans (2010) y comparador petrográfico." />
+  <meta name="keywords"
+    content="Petrología, UNRN, Rocas Ígneas, Basaltos, Riolitas, Ignimbritas, Texturas Volcánicas, Láminas Delgadas, Whitney y Evans" />
+  <meta name="author" content="Cátedra de Petrología Ígneo-Metamórfica - UNRN" />
+
+  <!-- Favicon -->
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌋</text></svg>">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+
+  <!-- =========================================================================
+       HEADER & NAVEGACIÓN PRINCIPAL
+       ========================================================================= -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-container">
+      <a href="#inicio" class="brand-logo">
+        <div class="brand-logo-unrn">
+          <img src="media/UNRN_Logo-1024x1024.webp" alt="Logo UNRN" class="unrn-logo-img" />
+        </div>
+        <div class="brand-divider"></div>
+        <div class="brand-title">
+          <span class="main-name">Universidad Nacional de Río Negro</span>
+          <span class="sub-name">Petrología Ígneo - Metamórfica</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+          <li><a href="#clasificacion" class="nav-link">Clasificación</a></li>
+          <li><a href="#catalogo" class="nav-link">Litoteca Virtual</a></li>
+          <li><a href="#comparador" class="nav-link">Comparador</a></li>
+          <li><a href="#glosario" class="nav-link">Glosario & Whitney</a></li>
+          <li><a href="#calendario" class="nav-link">Calendario</a></li>
+          <li><a href="#catedra" class="nav-link">Cátedra</a></li>
+          <li><a href="#recursos" class="nav-link">Recursos</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="theme-toggle-btn" id="themeToggleBtn" title="Cambiar tema (Claro / Oscuro)">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <button class="mobile-toggle-btn" id="mobileToggleBtn" title="Abrir menú">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       HERO SECTION: PORTADA CIENTÍFICA
+       ========================================================================= -->
+  <section class="hero-section" id="inicio">
+    <div class="container hero-grid">
+      <div class="hero-text-content">
+        <div class="hero-badge-pill">
+          <span class="pulse-dot"></span>
+          Recurso Académico Oficial • UNRN
+        </div>
+
+        <h1 class="hero-title">
+          Bienvenidos a Petrologia Ignea y Metamorfica
+          <span class="hero-title-sub">Universidad Nacional de Río Negro</span>
+        </h1>
+
+        <p class="hero-lead">
+          En esta plataforma, encontrarás recursos útiles para tu aprendizaje, como fotos de muestras de la cátedra, información sobre los contenidos del curso, y herramientas para facilitar el estudio de las rocas ígneas y metamórficas
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#catalogo" class="btn-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="7" height="7"></rect>
+              <rect x="14" y="3" width="7" height="7"></rect>
+              <rect x="14" y="14" width="7" height="7"></rect>
+              <rect x="3" y="14" width="7" height="7"></rect>
+            </svg>
+            Explorar Litoteca Virtual
+          </a>
+          <a href="#comparador" class="btn-secondary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+              <line x1="8" y1="21" x2="16" y2="21"></line>
+              <line x1="12" y1="17" x2="12" y2="21"></line>
+            </svg>
+            Comparador Petrográfico
+          </a>
+        </div>
+
+        
+      </div>
+
+      <div class="hero-visual-card" id="heroCarouselCard">
+        <div class="hero-carousel-container" id="heroCarousel">
+          <!-- Carrusel automático de muestras -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECCIÓN 1: DIAGRAMAS DE CLASIFICACIÓN & MARCO TEÓRICO
+       ========================================================================= -->
+  <section class="section" id="clasificacion"
+    style="background: var(--bg-secondary); border-bottom: 1px solid var(--border);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Fundamentos Petrológicos</span>
+        <h2 class="section-title">Clasificacion de las rocas Igneas</h2>
+        
+      </div>
+
+      <div
+        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; margin-top: 32px;">
+        <!-- Diagrama QAP Volcánico -->
+        <div
+          style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 24px; display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
+            <span
+              style="font-family: var(--font-mono); font-size: 0.8rem; font-weight: 700; color: var(--accent-emerald);">MODAL
+              • QAPF (IUGS)</span>
+            
+          </div>
+          <h3
+            style="font-family: var(--font-display); font-size: 1.25rem; color: var(--text-main); margin-bottom: 8px;">
+            Diagrama Triangular QAP</h3>
+          <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 16px;">
+            Basado en la proporción modal de <strong>Cuarzo (Q)</strong>, <strong>Feldespato Alcalino (A)</strong> y
+            <strong>Plagioclasa (P)</strong> para rocas con M &lt; 90% de minerales máficos.
+          </p>
+          <div class="qap-images">
+            <div class="qap-img-wrapper">
+              <img src="media/Diagramas/Rocas plutónicas.png" alt="Rocas plutónicas" class="responsive-img" />
+            </div>
+            <div class="qap-img-wrapper">
+              <img src="media/Diagramas/Rocas volcánicas.png" alt="Rocas volcánicas" class="responsive-img" />
+            </div>
+          </div>
+          
+        </div>
+
+        <!-- Diagrama Piroclástico de Fisher -->
+        <div
+          style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 24px; display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
+            <span
+              style="font-family: var(--font-mono); font-size: 0.8rem; font-weight: 700; color: var(--accent-amber);">GRANULOMETRÍA
+              • FISHER (1966)</span>
+            
+          </div>
+          <h3
+            style="font-family: var(--font-display); font-size: 1.25rem; color: var(--text-main); margin-bottom: 8px;">
+            Triángulo de Fragmentos Piroclásticos</h3>
+          <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 16px;">
+            Clasificación textural basada en el tamaño de los clastos: <strong>Bloques / Bombas (&gt;64 mm)</strong>,
+            <strong>Lapilli (2 a 64 mm)</strong> y <strong>Ceniza (&lt;2 mm)</strong>.
+          </p>
+          <div
+            style="background: var(--bg-secondary); border-radius: var(--radius-md); padding: 16px; margin-bottom: 16px; border: 1px dashed var(--border); text-align: center;">
+            <div class="piroclastico-img">
+              <img src="media/Diagramas/Segun composición y según granulometría.png" alt="Triángulo de fragmentos piroclásticos" class="responsive-img" />
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECCIÓN 2: LITOTECA VIRTUAL / CATÁLOGO DE MUESTRAS INTERACTIVO
+       ========================================================================= -->
+  <section class="section" id="catalogo">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Litoteca Interactiva</span>
+        <h2 class="section-title">Colección de Rocas Ígneas</h2>
+        
+      </div>
+
+      <!-- Barra de Filtros y Controles -->
+      <div class="explorer-controls">
+        <!-- Tabs de Categoría -->
+        <div class="filter-category-tabs">
+          <button class="category-tab-btn active" data-category="all">
+            Todas las Rocas
+            <span class="tab-count" data-count="all">27</span>
+          </button>
+          <button class="category-tab-btn" data-category="maficas">
+            Volcánicas Efusivas Máficas
+            <span class="tab-count" data-count="maficas">13</span>
+          </button>
+          <button class="category-tab-btn" data-category="felsicas">
+            Volcánicas Efusivas Félsicas
+            <span class="tab-count" data-count="felsicas">5</span>
+          </button>
+          <button class="category-tab-btn" data-category="piroclasticas">
+            Piroclásticas
+            <span class="tab-count" data-count="piroclasticas">9</span>
+          </button>
+        </div>
+
+        <!-- Filtros secundarios y búsqueda -->
+        <div class="filter-toolbar">
+          <div class="search-input-wrapper">
+            <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" id="searchInput" class="search-input"
+              placeholder="Buscar por mineral (Pl, Olv, Qz), textura, código o localidad..." />
+          </div>
+
+          <select id="locationSelect" class="filter-select">
+            <option value="all">Todas las Localidades</option>
+          </select>
+
+          <select id="textureSelect" class="filter-select">
+            <option value="all">Todas las Texturas</option>
+          </select>
+
+          <div class="view-mode-toggle">
+            <button class="view-mode-btn active" data-mode="grid" title="Vista Cuadrícula">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="7" height="7"></rect>
+                <rect x="14" y="3" width="7" height="7"></rect>
+                <rect x="14" y="14" width="7" height="7"></rect>
+                <rect x="3" y="14" width="7" height="7"></rect>
+              </svg>
+            </button>
+            <button class="view-mode-btn" data-mode="flip" title="Vista Fichas 3D de Estudio">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67" />
+              </svg>
+            </button>
+          </div>
+
+          <button id="resetFiltersBtn" class="btn-reset-filters">Limpiar</button>
+        </div>
+
+        <div style="margin-top: 14px; display: flex; justify-content: space-between; align-items: center;">
+          <span id="sampleCountBadge" style="font-size: 0.82rem; font-weight: 600; color: var(--accent-emerald);">27
+            muestras</span>
+          <span style="font-size: 0.8rem; color: var(--text-faint);">💡 Haz clic en cualquier imagen para abrir el visor
+            HD con zoom y abreviaturas</span>
+        </div>
+      </div>
+
+      <!-- Contenedor dinámico de muestras -->
+      <div id="samplesGrid" class="samples-grid">
+        <!-- Renderizado por app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECCIÓN 2: COMPARADOR PETROGRÁFICO
+       ========================================================================= -->
+  <section class="section" id="comparador" style="background: var(--bg-secondary);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Herramienta Didáctica</span>
+        <h2 class="section-title">Comparador Petrográfico Interactivo</h2>
+        
+      </div>
+
+      <div class="comparator-box">
+        <div class="comparator-selectors">
+          <div class="comparator-select-panel">
+            <label for="compSelectA">Muestra A</label>
+            <select id="compSelectA" class="filter-select" style="width: 100%;"></select>
+          </div>
+
+          <div class="comparator-vs-badge">VS</div>
+
+          <div class="comparator-select-panel">
+            <label for="compSelectB">Muestra B</label>
+            <select id="compSelectB" class="filter-select" style="width: 100%;"></select>
+          </div>
+        </div>
+
+        <div class="comparator-display-grid">
+          <div class="comparison-column" id="compCardA">
+            <!-- Dinámico por app.js -->
+          </div>
+          <div class="comparison-column" id="compCardB">
+            <!-- Dinámico por app.js -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECCIÓN 3: GLOSARIO Y ABREVIATURAS WHITNEY & EVANS (2010)
+       ========================================================================= -->
+  <section class="section" id="glosario">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Referencia Científica</span>
+        <h2 class="section-title">Glosario & Abreviaturas Minerales</h2>
+        
+      </div>
+
+      <div class="glossary-layout">
+        <!-- Panel 1: Abreviaturas Minerales -->
+        <div class="glossary-panel">
+          <div class="glossary-panel-header">
+            <h3 class="glossary-panel-title">Abreviaturas</h3>
+            <span style="font-size: 0.8rem; color: var(--accent-amber); font-weight: 600;">Norma Internacional</span>
+          </div>
+
+          <input type="text" id="glossarySearchInput" class="glossary-search-box"
+            placeholder="Filtrar por abreviatura (Pl, Qz, Cpx, Idg...)" />
+
+          <div class="abbreviations-table-wrap">
+            <table class="custom-table">
+              <thead>
+                <tr>
+                  <th>Abreviatura</th>
+                  <th>Mineral / Componente</th>
+                </tr>
+              </thead>
+              <tbody id="abbreviationsTbody">
+                <!-- Poblado por app.js -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Panel 2: Texturas Ígneas y Piroclásticas -->
+        <div class="glossary-panel">
+          <div class="glossary-panel-header">
+            <h3 class="glossary-panel-title">Texturas Ígneas y Piroclásticas</h3>
+            <span style="font-size: 0.8rem; color: var(--accent-emerald); font-weight: 600;">Criterios
+              Petrográficos</span>
+          </div>
+
+          <div id="texturesAccordionList" style="max-height: 480px; overflow-y: auto;">
+            <!-- Poblado por app.js -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECCIÓN 5: CALENDARIO ACADÉMICO DE LA CÁTEDRA
+       ========================================================================= -->
+  <section class="section" id="calendario">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Cronograma Oficial</span>
+        <h2 class="section-title">Calendario Académico de Petrología</h2>
+        
+      </div>
+
+      <div class="calendar-wrapper">
+        <div class="calendar-iframe-box">
+          <iframe
+            src="https://calendar.google.com/calendar/embed?src=paginapetrologiaunrn%40gmail.com&color=%239fe1e7&ctz=America%2FArgentina%2FBuenos_Aires"
+            style="border: 0" width="100%" height="580" frameborder="0" scrolling="no"
+            title="Calendario Académico Petrología UNRN">
+          </iframe>
+        </div>
+        <div
+          style="margin-top: 16px; text-align: center; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;">
+          <a href="https://calendar.google.com/calendar/u/0/newembed?color=%239fe1e7&src=paginapetrologiaunrn@gmail.com"
+            target="_blank" rel="noopener noreferrer" class="btn-primary"
+            style="display: inline-flex; font-size: 0.88rem; padding: 10px 20px;">
+            📅 Abrir Calendario en Nueva Ventana
+          </a>
+          <a href="https://calendar.google.com/calendar/r?cid=paginapetrologiaunrn@gmail.com" target="_blank"
+            rel="noopener noreferrer" class="btn-secondary"
+            style="display: inline-flex; font-size: 0.88rem; padding: 10px 20px;">
+            📲 Sincronizar en Google Calendar / Celular
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECCIÓN 6: EQUIPO DOCENTE & CONTACTOS
+       ========================================================================= -->
+  <section class="section" id="catedra" style="background: var(--bg-secondary);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Cuerpo Académico</span>
+        <h2 class="section-title">Equipo de Cátedra</h2>
+        
+      </div>
+
+      <div class="team-grid">
+        <!-- Pablo D. González -->
+        <div class="team-card">
+          <div class="team-avatar-box">🌋</div>
+          <h3 class="team-name">Pablo D. González</h3>
+          <span class="team-role">Profesor Titular</span>
+          <a href="mailto:pdgonzalez@unrn.edu.ar" class="team-mail-btn" title="Enviar correo">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            pdgonzalez@unrn.edu.ar
+          </a>
+        </div>
+
+        <!-- Paulo Marcos -->
+        <div class="team-card">
+          <div class="team-avatar-box">🔬</div>
+          <h3 class="team-name">Paulo Marcos</h3>
+          <span class="team-role">Jefe de Trabajos Prácticos</span>
+          <a href="mailto:paulomarcos89@hotmail.com" class="team-mail-btn" title="Enviar correo">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            paulomarcos89@hotmail.com
+          </a>
+        </div>
+
+        <!-- Brenda Aramendía -->
+        <div class="team-card">
+          <div class="team-avatar-box">⛏️</div>
+          <h3 class="team-name">Brenda Aramendía</h3>
+          <span class="team-role">Ayudante de Primera</span>
+          <a href="mailto:brendaaramendia@hotmail.com" class="team-mail-btn" title="Enviar correo">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            brendaaramendia@hotmail.com
+          </a>
+        </div>
+
+        <!-- Fatima M. Fradkin -->
+        <div class="team-card">
+          <div class="team-avatar-box">🎓</div>
+          <h3 class="team-name">Fatima M. Fradkin</h3>
+          <span class="team-role">Ayudante Estudiante</span>
+          <a href="mailto:fatifra.uni@gmail.com" class="team-mail-btn" title="Enviar correo">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            fatifra.uni@gmail.com
+          </a>
+        </div>
+
+        <!-- Melisa L. Valdez -->
+        <div class="team-card">
+          <div class="team-avatar-box">🎓</div>
+          <h3 class="team-name">Melisa L. Valdez</h3>
+          <span class="team-role">Ayudante Estudiante</span>
+          <a href="mailto:melililen424@outlook.com" class="team-mail-btn" title="Enviar correo">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            melililen424@outlook.com
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECCIÓN 7: RECURSOS COMPLEMENTARIOS & BIBLIOGRAFÍA
+       ========================================================================= -->
+  <section class="section" id="recursos">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Biblioteca Digital</span>
+        <h2 class="section-title">Recursos Complementarios</h2>
+        
+      </div>
+
+      <div class="resources-grid">
+        <!-- Libro RID UNRN -->
+        <div class="resource-card">
+          <div class="resource-icon-box">📖</div>
+          <h3 class="resource-name">Texturas de los Cuerpos Ígneos</h3>
+          <p class="resource-desc">
+            Publicación académica de referencia por el Dr. Pablo D. González (2015), editado por la Universidad
+            Nacional de Río Negro.
+          </p>
+          <a href="https://rid.unrn.edu.ar/handle/20.500.12049/5620" target="_blank" rel="noopener noreferrer"
+            class="resource-link-btn">
+            Acceder al RID UNRN <span>&rarr;</span>
+          </a>
+        </div>
+
+        <!-- Virtual Microscope -->
+        <div class="resource-card">
+          <div class="resource-icon-box">🔬</div>
+          <h3 class="resource-name">Virtual Microscope</h3>
+          <p class="resource-desc">
+            Colección interactiva global de láminas delgadas de rocas ígneas, metamórficas y sedimentarias con
+            rotación de platina polarizada.
+          </p>
+          <a href="https://www.virtualmicroscope.org/" target="_blank" rel="noopener noreferrer"
+            class="resource-link-btn">
+            Explorar Microscopio Virtual <span>&rarr;</span>
+          </a>
+        </div>
+
+        <!-- Atlas of Optical Mineralogy -->
+        <div class="resource-card">
+          <div class="resource-icon-box">💎</div>
+          <h3 class="resource-name">Atlas of Optical Mineralogy</h3>
+          <p class="resource-desc">
+            Guía de reconocimiento de propiedades ópticas (birrefringencia, pleocroísmo, extinción, maclas y figuras
+            de interferencia).
+          </p>
+          <a href="https://www.alexstrekeisen.it/" target="_blank" rel="noopener noreferrer" class="resource-link-btn">
+            Consultar Atlas Strekeisen <span>&rarr;</span>
+          </a>
+        </div>
+
+        <!-- Whitney & Evans Paper -->
+        <div class="resource-card">
+          <div class="resource-icon-box">📑</div>
+          <h3 class="resource-name">Whitney & Evans (2010)</h3>
+          <p class="resource-desc">
+            <em>Abbreviations for names of rock-forming minerals</em>. American Mineralogist, 95(1), 185-187.
+          </p>
+          <a href="https://doi.org/10.2138/am.2010.3371" target="_blank" rel="noopener noreferrer"
+            class="resource-link-btn">
+            Ver Publicación DOI <span>&rarr;</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       MODAL / LIGHTBOX DE ALTA RESOLUCIÓN
+       ========================================================================= -->
+  <div class="lightbox-modal" id="lightboxModal">
+    <div class="lightbox-content-box">
+      <button class="lightbox-close-btn" id="lightboxCloseBtn" title="Cerrar (Esc)">&times;</button>
+
+      <!-- Zona de Imagen HD -->
+      <div class="lightbox-img-area">
+        <img src="" alt="Fotomicrografía de lámina delgada" id="lightboxMainImg" class="lightbox-main-img" />
+
+        <div class="lightbox-controls">
+          <button class="lightbox-ctrl-btn" id="lightboxPrevBtn" title="Anterior (Flecha izquierda)">&#8592;</button>
+          <span id="lightboxImgCounter"
+            style="font-size: 0.8rem; color: var(--text-muted); display: flex; align-items: center; padding: 0 4px;">1 /
+            1</span>
+          <button class="lightbox-ctrl-btn" id="lightboxNextBtn" title="Siguiente (Flecha derecha)">&#8594;</button>
+        </div>
+      </div>
+
+      <!-- Barra Lateral de Datos y Epígrafe -->
+      <div class="lightbox-sidebar">
+        <h3 class="lightbox-title" id="lightboxTitle">Nombre de la Muestra</h3>
+        <div style="font-size: 0.85rem; color: var(--text-faint); margin-bottom: 16px;" id="lightboxLocation">
+          Ubicación</div>
+
+        <div class="lightbox-caption-text" id="lightboxCaption">
+          <!-- Epígrafe detallado con abreviaturas resaltadas -->
+        </div>
+
+        <div style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; margin-top: 12px;" id="lightboxDescription">
+          <!-- Descripción completa -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       FOOTER INSTITUCIONAL
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <div class="brand-logo" style="margin-bottom: 16px;">
+          <div class="brand-logo-unrn">
+            <img src="media/UNRN_Logo-1024x1024.webp" alt="Logo UNRN" class="unrn-logo-img" style="width:48px; height:48px;" />
+          </div>
+          <div class="brand-divider"></div>
+          <div class="brand-title">
+            <span class="main-name">Universidad Nacional de Río Negro</span>
+            <span class="sub-name">Petrología Ígneo - Metamórfica</span>
+          </div>
+        </div>
+        <p style="font-size: 0.85rem; color: var(--text-faint); line-height: 1.6;">
+          Plataforma educativa para estudiantes y docentes de la Licenciatura en Geología de la Universidad Nacional
+          de Río Negro (UNRN).
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navegación</h4>
+        <ul class="footer-links">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#catalogo">Litoteca Virtual</a></li>
+          <li><a href="#comparador">Comparador</a></li>
+          <li><a href="#glosario">Glosario Whitney & Evans</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Cátedra</h4>
+        <ul class="footer-links">
+          <li><a href="#calendario">Calendario de Clases</a></li>
+          <li><a href="#catedra">Equipo Docente</a></li>
+          <li><a href="#apps">Aplicaciones & Novedades</a></li>
+          <li><a href="#recursos">Bibliografía RID UNRN</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contacto & Redes</h4>
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 12px;">
+          Consultas académicas:<br>
+          <a href="mailto:petrologia.unrn@gmail.com" style="color: var(--unrn-red);">petrologia.unrn@gmail.com</a>
+        </p>
+        <p style="font-size: 0.85rem; color: var(--text-muted);">
+          Instagram Oficial:<br>
+          <a href="https://instagram.com/petrologia.unrn" target="_blank" rel="noopener noreferrer"
+            style="color: var(--text-muted);">@petrologia.unrn</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <span>© 2026 Universidad Nacional de Río Negro (UNRN) • Cátedra de Petrología Ígneo-Metamórfica</span>
+      <span class="footer-credit">
+        Hecho por
+        <a href="https://www.tuwebsma.com" target="_blank" rel="noopener noreferrer" class="footer-credit-link">Tu Web SMA — Diseño Web &amp; Desarrollo Digital</a>
+        &nbsp;•&nbsp;
+        <a href="https://instagram.com/tuweb_sma" target="_blank" rel="noopener noreferrer" class="footer-credit-link footer-instagram">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:-2px; margin-right:3px;"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>@tuweb_sma
+        </a>
+      </span>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/samples-data.js"></script>
+  <script src="js/glossary-data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>
